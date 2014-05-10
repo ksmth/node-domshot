@@ -42,7 +42,7 @@ If you don't specify an `outputPath` in the options object, no files will be cre
 - *path* - **function (element, options)** (optional): The result is appended to `outputPath`.
 - *filename* - **function (element, options)** (optional): The result is appended to `outputPath` after `path(element, options)`.
 
-### domshot.get(options, callback)
+### domshot.get(*options*, *callback*)
 
 #### options
 
