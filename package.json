@@ -1,6 +1,6 @@
 {
   "name"        : "domshot",
-  "version"     : "0.0.1",
+  "version"     : "0.0.2",
   "description" : "Take screenshots of DOM elements.",
   "main"        : "index.js",
   "author"      : "Kevin Smith <kevin@ksmth.de>",
