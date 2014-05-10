@@ -35,7 +35,7 @@ The constructor returns a new `domshot` instance. It uses the provided `browser`
 
 #### options
 
-If you don't specify an `outputPath` in the options object, no files will be created and you have to use the file buffers returned by the `get` method.
+If you don't specify an `outputPath` in the options object, no files will be created and you have to use the image buffers of the elements returned by the `get` method.
 
 - *browser*: **object** `wd` browser instance
 - *outputPath (optional)*: **string** Base path where images will be stored. default: `undefined`
@@ -56,9 +56,9 @@ If you don't specify an `outputPath` in the options object, no files will be cre
   {
     selector : ...,
     url      : ...,
-    image    : ...,
-    filename : ...,
-    filepath : ...,
+    image    : ..., // image buffer
+    filename : ..., // only present if outputPath is set
+    filepath : ..., // only present if outputPath is set
 
     size : {
       width  : ...,
@@ -77,3 +77,7 @@ If you don't specify an `outputPath` in the options object, no files will be cre
 ### domshot.get(url, callback)
 
 Shorthand for `domshot.get({ url : url }, callback)`
+
+### domshot.get(optionsArray, callback)
+
+Another shorthand. `optionsArray` contains multiple `options` objects suitable for `domshot.get(options, callback)`.
