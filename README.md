@@ -37,17 +37,17 @@ The constructor returns a new `domshot` instance. It uses the provided `browser`
 
 If you don't specify an `outputPath` in the options object, no files will be created and you have to use the image buffers of the elements returned by the `get` method.
 
-- *browser*: **object** `wd` browser instance
-- *outputPath (optional)*: **string** Base path where images will be stored. default: `undefined`
-- *path (optional)*: **function (element, options)** The result is appended to `outputPath`.
-- *filename (optional)*: **function (element, options)** The result is appended to `outputPath` after `path(element, options)`.
+- *browser* - **object**: `wd` browser instance
+- *outputPath* - **string** (optional): Base path where images will be stored. default: `undefined`
+- *path* - **function (element, options)** (optional): The result is appended to `outputPath`.
+- *filename* - **function (element, options)** (optional): The result is appended to `outputPath` after `path(element, options)`.
 
 ### domshot.get(options, callback)
 
 #### options
 
-- *url*: **string** The target URL
-- *selectors (optional)*: **array** CSS selectors of elements to be captured. default: `['body']`
+- *url* - **string**: The target URL
+- *selectors* - **array** (optional): CSS selectors of elements to be captured. default: `['body']`
 
 #### result
 
@@ -74,10 +74,10 @@ If you don't specify an `outputPath` in the options object, no files will be cre
 ]
 ```
 
-### domshot.get(url, callback)
+### domshot.get(*url*, *callback*)
 
 Shorthand for `domshot.get({ url : url }, callback)`
 
-### domshot.get(optionsArray, callback)
+### domshot.get(*optionsArray*, *callback*)
 
 Another shorthand. `optionsArray` contains multiple `options` objects suitable for `domshot.get(options, callback)`.
